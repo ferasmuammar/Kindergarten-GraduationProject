@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GradeController;
+use App\Http\Controllers\SectionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,3 +19,4 @@ Route::get('/', function () {
     return view('dashboard');
 });
 Route::resource('grade',GradeController::class);
+Route::resource('section',SectionController::class);
