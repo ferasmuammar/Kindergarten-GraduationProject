@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\GradeController;
 use App\Http\Controllers\SectionController;
+
+use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,3 +23,6 @@ Route::get('/', function () {
 });
 Route::resource('grade',GradeController::class);
 Route::resource('section',SectionController::class);
+ Route::resource('Teachers',TeacherController::class);
+ Route::resource('tests',TestController::class);
+

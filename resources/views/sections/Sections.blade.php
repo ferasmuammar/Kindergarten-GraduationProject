@@ -202,7 +202,23 @@
                                                                                                 <label
                                                                                                     class="form-check-label"
                                                                                                     for="exampleCheck1">الحالة</label>
+                                                                                            </div><br>
+
+                                                                                            <div class="col">
+                                                                                                <label for="inputName" class="control-label">أسماء المعلمين</label>
+                                                                                                <select multiple name="teacher_id[]" class="form-control" id="exampleFormControlSelect2">
+                                                                                                    @foreach($list_Sections->teachers as $teacher)
+                                                                                                        <option selected value="{{$teacher['id']}}">{{$teacher->First_name. " " .$teacher->Second_name." ". $teacher->Last_name}}</option>
+                                                                                                    @endforeach
+                                                                                                    $teacher->First_name. " " .$teacher->Second_name." ". $teacher->Last_name
+
+
+                                                                                                    @foreach($teachers as $teacher)
+                                                                                                        <option value="{{$teacher->id}}">{{$teacher->First_name. " " .$teacher->Second_name." ". $teacher->Last_name}}</option>
+                                                                                                    @endforeach
+                                                                                                </select>
                                                                                             </div>
+
                                                                                         </div>
 
 
@@ -250,7 +266,8 @@
                                                                                         {{ method_field('Delete') }}
                                                                                         @csrf
                                                                                         هل انت متاكد من عملية الحذف ؟
-                                                                                        <input id="id" type="hidden"
+                                                                                        <input id="id"
+                                                                                            type="hidden"
                                                                                             name="id"
                                                                                             class="form-control"
                                                                                             value="{{ $list_Sections->id }}">
@@ -328,7 +345,14 @@
 
                                             </select>
                                         </div> --}}
-
+                        <div class="col">
+                            <label for="inputName" class="control-label">أسماء المعلمين</label>
+                            <select multiple name="teacher_id[]" class="form-control" id="exampleFormControlSelect2">
+                                @foreach($teachers as $teacher)
+                                    <option value="{{$teacher->id}}">{{$teacher->First_name. " " .$teacher->Second_name." ". $teacher->Last_name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
 
                         </div>
                         <div class="modal-footer">
