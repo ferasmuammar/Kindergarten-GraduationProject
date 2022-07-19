@@ -2,28 +2,28 @@
 
 namespace App\Http\Controllers;
 
+use App\Repository\StudentRepositoryInterface;
 use Illuminate\Http\Request;
 
-class SpecializationController extends Controller
+class StudentController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
+    protected $Student;
+
+    public function __construct(StudentRepositoryInterface $Student)
+    {
+        $this->Student = $Student;
+    }
+
     public function index()
     {
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
-        //
+        return $this->Student->Create_Student();
     }
 
     /**
@@ -34,7 +34,7 @@ class SpecializationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $this->Student->Store_Student($request);
     }
 
     /**

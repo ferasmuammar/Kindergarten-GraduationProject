@@ -32,6 +32,7 @@ class StoreGrade extends FormRequest
     {
         return[
             'name.required'=>'اسم المرحلة مطلوب',
+            //'name.regex'=>'الرجاء إدخال القيم بدون رقم'
         ];
     }
 }

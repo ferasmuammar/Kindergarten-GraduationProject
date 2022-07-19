@@ -177,6 +177,7 @@
                                 <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
+                            
 
                             <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" type="submit">حفظ البايانات</button>
                     </form>
