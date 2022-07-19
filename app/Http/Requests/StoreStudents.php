@@ -25,11 +25,11 @@ class StoreStudents extends FormRequest
     {
         return [
             'name' => 'required',
-            'email' => 'required|email|unique:students,email',
+            'email' => 'required|email|unique:students,email,'.$this->id,
             'password' => 'required|string|min:6|max:10',
             'gender_id' => 'required',
             'nationalitie_id' => 'required',
-            
+
             'Mobile'=>'required',
             'Age'=>'required',
             'Address'=>'required',

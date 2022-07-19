@@ -2,11 +2,24 @@
 @section('css')
     @toastr_css
 @section('title')
-    {{trans('main_trans.add_student')}}
+   إضافه طالب
 @stop
 @endsection
 @section('page-header')
 <!-- breadcrumb -->
+<div class="page-title">
+    <div class="row">
+        <div class="col-sm-6">
+            <h4 class="mb-0"> إضافه طالب</h4>
+        </div>
+        <div class="col-sm-6">
+            <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right ">
+                <li class="breadcrumb-item"><a href="#" class="default-color">الصفحه الرئيسية</a></li>
+                <li class="breadcrumb-item active">Page Title</li>
+            </ol>
+        </div>
+    </div>
+</div>
 @section('PageTitle')
     {{trans('main_trans.add_student')}}
 @stop
@@ -121,7 +134,7 @@
 
                     <h6 style="font-family: 'Cairo', sans-serif;color: blue">معلومات الطالب</h6><br>
                     <div class="row">
-                            <div class="col-md-2">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="Grade_id">اسم المرحله : <span class="text-danger">*</span></label>
                                     <select class="custom-select mr-sm-2" name="Grade_id">
@@ -133,16 +146,7 @@
                                 </div>
                             </div>
 
-                            {{-- <div class="col-md-2">
-                                <div class="form-group">
-                                    <label for="Classroom_id">{{trans('Students_trans.classrooms')}} : <span class="text-danger">*</span></label>
-                                    <select class="custom-select mr-sm-2" name="Classroom_id">
-
-                                    </select>
-                                </div>
-                            </div> --}}
-
-                            <div class="col-md-2">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="section_id">القسم: </label>
                                     <select class="custom-select mr-sm-2" name="section_id">
@@ -157,7 +161,7 @@
 
 
 
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                             <div class="form-group">
                                 <label for="academic_year">السنه الدراسية : <span class="text-danger">*</span></label>
                                 <select class="custom-select mr-sm-2" name="academic_year">
