@@ -42,7 +42,7 @@
                     </div>
                 @endif
 
-                <form method="post"  action="{{ route('Student.store') }}" autocomplete="off">
+                <form method="post"  action="{{ route('Student.store') }}" autocomplete="off" enctype="multipart/form-data">
                     @csrf
                     <h6 style="font-family: 'Cairo', sans-serif;color: blue">المعلومات الشخصية</h6><br>
                         <div class="row">
@@ -176,6 +176,13 @@
                             </div>
                         </div>
                         </div><br>
+
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label for="academic_year">{{trans('Students_trans.Attachments')}} : <span class="text-danger">*</span></label>
+                                <input type="file" accept="image/*" name="photos[]" multiple>
+                            </div>
+                        </div>
                     <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" type="submit">حفظ البيانات</button>
                 </form>
 
