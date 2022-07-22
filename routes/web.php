@@ -20,11 +20,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('dashboard');
 });
-Route::resource('grade',GradeController::class);
-Route::resource('section',SectionController::class);
-Route::resource('Teachers',TeacherController::class);
-Route::resource('Student',StudentController::class);
+Route::resource('grade', GradeController::class);
+Route::resource('section', SectionController::class);
+Route::resource('Teachers', TeacherController::class);
 
-
+//==============================Students============================
+Route::resource('Student', StudentController::class);
+Route::get('/Get_classrooms/{id}', 'StudentController@Get_classrooms');
+Route::get('/Get_Sections/{id}', 'StudentController@Get_Sections');
+// Route::post('/update-admin/{id}',[AdminController::class, 'Update'])->name('update-admin');
+Route::post('Upload_attachment',[StudentController::class, 'Upload_attachment'])->name('Upload_attachment');
+Route::get('Download_attachment/{studentsname}/{filename}',[StudentController::class, 'Download_attachment'])->name('Download_attachment');
+Route::post('Delete_attachment',[StudentController::class, 'Delete_attachment'])->name('Delete_attachment');
 
 
