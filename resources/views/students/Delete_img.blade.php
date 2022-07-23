@@ -3,7 +3,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 style="font-family: 'Cairo', sans-serif;" class="modal-title" id="exampleModalLabel">{{trans('Students_trans.Delete_attachment')}}</h5>
+                <h5 style="font-family: 'Cairo', sans-serif;" class="modal-title" id="exampleModalLabel">حذف مرفق</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -16,12 +16,12 @@
                     <input type="hidden" name="student_name" value="{{$attachment->imageable->name}}">
                     <input type="hidden" name="student_id" value="{{$attachment->imageable->id}}">
 
-                    <h5 style="font-family: 'Cairo', sans-serif;">{{trans('Students_trans.Delete_attachment_tilte')}}</h5>
+                    <h5 style="font-family: 'Cairo', sans-serif;">هل أنت متأكد من حذف المرفق ؟؟</h5>
                     <input type="text" name="filename" readonly value="{{$attachment->filename}}" class="form-control">
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">{{trans('Students_trans.Close')}}</button>
-                        <button  class="btn btn-danger">{{trans('Students_trans.submit')}}</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">إغلاق</button>
+                        <button  class="btn btn-danger">تأكيد</button>
                     </div>
                 </form>
             </div>

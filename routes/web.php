@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GradeController;
+use App\Http\Controllers\PromotionController;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
@@ -32,5 +33,9 @@ Route::get('/Get_Sections/{id}', 'StudentController@Get_Sections');
 Route::post('Upload_attachment',[StudentController::class, 'Upload_attachment'])->name('Upload_attachment');
 Route::get('Download_attachment/{studentsname}/{filename}',[StudentController::class, 'Download_attachment'])->name('Download_attachment');
 Route::post('Delete_attachment',[StudentController::class, 'Delete_attachment'])->name('Delete_attachment');
+
+    //==============================Promotion Students ============================
+
+Route::resource('Promotion',PromotionController::class);
 
 
