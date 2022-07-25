@@ -80,6 +80,7 @@
                             <li> <a href="{{ route('Student.create') }}">إضافة طالب جديد </a> </li>
                             <li> <a href="{{route('Student.index')}}">عرض الطلاب</a> </li>
                             <li> <a href="{{route('Promotion.index')}}">ترقيات الطلاب</a> </li>
+                            <li> <a href="{{route('Promotion.create')}}">ادارة ترقية الطلاب</a> </li>
                             <li> <a href="calendar-list.html">List Calendar</a> </li>
                         </ul>
                     </li>

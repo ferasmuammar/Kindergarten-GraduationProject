@@ -43,14 +43,6 @@
                                     @endforeach
                                 </select>
                             </div>
-                            {{-- <div class="form-group col">
-                                <label for="Classroom_id">{{trans('Students_trans.classrooms')}} : <span
-                                        class="text-danger">*</span></label>
-                                <select class="custom-select mr-sm-2" name="Classroom_id" required>
-
-                                </select>
-                            </div> --}}
-
                             <div class="form-group col">
                                 <label for="section_id">القسم : </label>
                                 <select class="custom-select mr-sm-2" name="section_id" required>
@@ -60,6 +52,20 @@
                                     @endforeach
 
                                 </select>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="academic_year">السنه الدراسيه : <span class="text-danger">*</span></label>
+                                    <select class="custom-select mr-sm-2" name="academic_year">
+                                        <option selected disabled>اختار من القائمه...</option>
+                                        @php
+                                            $current_year = date("Y");
+                                        @endphp
+                                        @for($year=$current_year; $year<=$current_year +1 ;$year++)
+                                            <option value="{{ $year}}">{{ $year }}</option>
+                                        @endfor
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <br><h6 style="color: red;font-family: Cairo">المرحلة الدراسية الجديدة</h6><br>
@@ -74,13 +80,6 @@
                                     @endforeach
                                 </select>
                             </div>
-                            {{-- <div class="form-group col">
-                                <label for="Classroom_id">{{trans('Students_trans.classrooms')}}: <span
-                                        class="text-danger">*</span></label>
-                                <select class="custom-select mr-sm-2" name="Classroom_id_new" >
-
-                                </select>
-                            </div> --}}
                             <div class="form-group col">
                                 <label for="section_id">:القسم </label>
                                 <select class="custom-select mr-sm-2" name="section_id_new" >
@@ -89,6 +88,21 @@
                                         <option value="{{$section->id}}">{{$section->Name_Section}}</option>
                                     @endforeach
                                 </select>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="academic_year">السنه الدراسيه : <span class="text-danger">*</span></label>
+                                    <select class="custom-select mr-sm-2" name="academic_year_new">
+                                        <option selected disabled>اختار من القائمه...</option>
+                                        @php
+                                            $current_year = date("Y");
+                                        @endphp
+                                        @for($year=$current_year; $year<=$current_year +1 ;$year++)
+                                            <option value="{{ $year}}">{{ $year }}</option>
+                                        @endfor
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">تاكيد</button>
