@@ -7,7 +7,8 @@
                     <!-- menu item Dashboard-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#dashboard">
-                            <div class="pull-left"><i class="ti-home"></i><span class="right-nav-text">الصفحة الرئيسة</span>
+                            <div class="pull-left"><i class="ti-home"></i><span class="right-nav-text">الصفحة
+                                    الرئيسة</span>
                             </div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
@@ -25,8 +26,8 @@
                     <!-- menu item Elements-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#elements">
-                            <div class="pull-left"><i class="ti-palette"></i><span
-                                    class="right-nav-text">المراحل الدراسية</span></div>
+                            <div class="pull-left"><i class="ti-palette"></i><span class="right-nav-text">المراحل
+                                    الدراسية</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
@@ -39,8 +40,8 @@
                     <!-- menu item calendar-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#calendar-menu">
-                            <div class="pull-left"><i class="ti-calendar"></i><span
-                                    class="right-nav-text">الأقسام </span></div>
+                            <div class="pull-left"><i class="ti-calendar"></i><span class="right-nav-text">الأقسام
+                                </span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>
@@ -62,14 +63,14 @@
                         </a>
                         <ul id="Teachers-menu" class="collapse" data-parent="#sidebarnav">
                             <li> <a href="{{ route('Teachers.index') }}">قائمة المدرسين</a> </li>
-                            <li> <a href="{{route('Teachers.create')}}">إضافة المدرسين</a> </li>
+                            <li> <a href="{{ route('Teachers.create') }}">إضافة المدرسين</a> </li>
 
                         </ul>
 
                     </li>
 
-                     <!-- students-->
-                     <li>
+                    <!-- students-->
+                    <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#students-menu">
                             <div class="pull-left"><i class="fas fa-user-graduate"></i></i></i><span
                                     class="right-nav-text">الطلاب</span></div>
@@ -77,18 +78,49 @@
                             <div class="clearfix"></div>
                         </a>
                         <ul id="students-menu" class="collapse" data-parent="#sidebarnav">
-                            <li> <a href="{{ route('Student.create') }}">إضافة طالب جديد </a> </li>
-                            <li> <a href="{{route('Student.index')}}">عرض الطلاب</a> </li>
-                            <li> <a href="{{route('Promotion.index')}}">ترقيات الطلاب</a> </li>
-                            <li> <a href="{{route('Promotion.create')}}">ادارة ترقية الطلاب</a> </li>
-                            <li> <a href="calendar-list.html">List Calendar</a> </li>
+
+
+                            <li>
+                                <a href="javascript:void(0);" data-toggle="collapse"
+                                    data-target="#Student_information">معلومات الطالب<div class="pull-right"><i
+                                            class="ti-plus"></i></div>
+                                    <div class="clearfix"></div>
+                                </a>
+                                <ul id="Student_information" class="collapse">
+                                    <li> <a href="{{ route('Student.create') }}">إضافة طالب جديد </a> </li>
+                                    <li> <a href="{{ route('Student.index') }}">عرض الطلاب</a> </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" data-toggle="collapse"
+                                    data-target="#Students_upgrade">ترقيات الطالب<div class="pull-right"><i
+                                            class="ti-plus"></i></div>
+                                    <div class="clearfix"></div>
+                                </a>
+                                <ul id="Students_upgrade" class="collapse">
+                                    <li> <a href="{{ route('Promotion.index') }}">ترقيات الطلاب</a> </li>
+                                    <li> <a href="{{ route('Promotion.create') }}">ادارة ترقية الطلاب</a> </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);" data-toggle="collapse"
+                                    data-target="#Graduate students">قائمه المتخرجين<div class="pull-right"><i
+                                            class="ti-plus"></i></div>
+                                    <div class="clearfix"></div>
+                                </a>
+                                <ul id="Graduate students" class="collapse">
+                                    <li> <a href="{{ route('Graduated.create') }}">إضافه خرجين</a> </li>
+                                    <li> <a href="{{ route('Graduated.index') }}">عرض الخرجين</a> </li>
+                                </ul>
+                            </li>
                         </ul>
                     </li>
 
                     <!-- library-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#library-icon">
-                            <div class="pull-left"><i class="fas fa-book"></i><span class="right-nav-text">المكتبة</span></div>
+                            <div class="pull-left"><i class="fas fa-book"></i><span
+                                    class="right-nav-text">المكتبة</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
                         </a>

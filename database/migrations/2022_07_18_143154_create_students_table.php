@@ -19,7 +19,7 @@ class CreateStudentsTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->bigInteger('gender_id')->unsigned();
-            
+
             $table->text('Address');
             $table->integer('Age');
             $table->string('Mobile');
@@ -39,6 +39,7 @@ class CreateStudentsTable extends Migration
             // $table->bigInteger('parent_id')->unsigned();
             // $table->foreign('parent_id')->references('id')->on('my__parents')->onDelete('cascade');
             $table->string('academic_year');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

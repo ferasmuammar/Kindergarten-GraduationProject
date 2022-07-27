@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\GradeController;
+use App\Http\Controllers\GraduatedController;
 use App\Http\Controllers\PromotionController;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\StudentController;
@@ -37,5 +38,6 @@ Route::post('Delete_attachment',[StudentController::class, 'Delete_attachment'])
     //==============================Promotion Students ============================
 
 Route::resource('Promotion',PromotionController::class);
+Route::resource('Graduated',GraduatedController::class);
 
 

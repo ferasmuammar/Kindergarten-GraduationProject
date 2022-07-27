@@ -18,7 +18,7 @@ class CreatePromotionsTable extends Migration
             $table->unsignedBigInteger('student_id');
             $table->unsignedBigInteger('from_grade');
             $table->unsignedBigInteger('from_section');
-
+            
             $table->unsignedBigInteger('to_grade');
             $table->unsignedBigInteger('to_section');
             $table->string('academic_year');
