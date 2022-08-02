@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\FeeController;
 use App\Http\Controllers\FeesInvoicesController;
 use App\Http\Controllers\GradeController;
 use App\Http\Controllers\GraduatedController;
+use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProcessingFeeController;
 use App\Http\Controllers\PromotionController;
 use App\Http\Controllers\ReceiptStudentsController;
@@ -60,6 +62,10 @@ Route::resource('Fees',FeeController::class);
 Route::resource('Fees_Invoices', FeesInvoicesController::class);
 Route::resource('receipt_students', ReceiptStudentsController::class);
 Route::resource('ProcessingFee', ProcessingFeeController::class);
+Route::resource('Payment_students', PaymentController::class);
+
+//================================Attendance ==============================
+Route::resource('Attendance', AttendanceController::class);
 
 
 

@@ -22,7 +22,7 @@
                         </ul>
                     </li>
                     <!-- menu title -->
-                    <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title">Components </li>
+                    <li class="mt-10 mb-10 text-muted pl-4 font-medium menu-title"> روضتنا أونلاين</li>
                     <!-- menu item Elements-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#elements">
@@ -56,7 +56,8 @@
                     <!-- Teachers-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Teachers-menu">
-                            <div class="pull-left"><i class="fas fa-chalkboard-teacher"></i></i><span
+                            <div class="pull-left"><i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                            </i><span
                                     class="right-nav-text">المدرسين</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
@@ -72,7 +73,7 @@
                     <!-- students-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#students-menu">
-                            <div class="pull-left"><i class="fas fa-user-graduate"></i></i></i><span
+                            <div class="pull-left"><i class="fa fa-user-o" aria-hidden="true"></i></i></i><span
                                     class="right-nav-text">الطلاب</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
@@ -119,7 +120,7 @@
                      <!-- Accounts-->
                      <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#Accounts-menu">
-                            <div class="pull-left"><i class="fas fa-money-bill-wave-alt"></i><span
+                            <div class="pull-left"><i class="fa fa-tasks" aria-hidden="true"></i><span
                                     class="right-nav-text">الحسابات</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>
@@ -128,15 +129,27 @@
                             <li> <a href="{{route('Fees.index')}}">الرسوم الدراسية</a> </li>
                             <li> <a href="{{route('Fees_Invoices.index')}}">الفواتير</a> </li>
                             <li> <a href="{{route('receipt_students.index')}}">سندات القبض</a> </li>
-    
                             <li> <a href="{{route('ProcessingFee.index')}}">استبعاد رسوم</a> </li>
+                            <li> <a href="{{route('Payment_students.index')}}">سندات الصرف</a> </li>
+                        </ul>
+                    </li>
+
+                    <!-- Attendance-->
+                    <li>
+                        <a href="javascript:void(0);" data-toggle="collapse" data-target="#Attendance-icon">
+                            <div class="pull-left"><i class="fa fa-calendar" aria-hidden="true"></i><span class="right-nav-text">الحضور والغياب</span></div>
+                            <div class="pull-right"><i class="ti-plus"></i></div>
+                            <div class="clearfix"></div>
+                        </a>
+                        <ul id="Attendance-icon" class="collapse" data-parent="#sidebarnav">
+                            <li> <a href="{{route('Attendance.index')}}">قائمة الطلاب</a> </li>
                         </ul>
                     </li>
 
                     <!-- library-->
                     <li>
                         <a href="javascript:void(0);" data-toggle="collapse" data-target="#library-icon">
-                            <div class="pull-left"><i class="fas fa-book"></i><span
+                            <div class="pull-left"><i class="fa fa-book" aria-hidden="true"></i><span
                                     class="right-nav-text">المكتبة</span></div>
                             <div class="pull-right"><i class="ti-plus"></i></div>
                             <div class="clearfix"></div>

@@ -2,14 +2,14 @@
 @section('css')
     @toastr_css
 @section('title')
-   استبعاد رسوم
+    سند صرف
 @stop
 @endsection
 @section('page-header')
 <div class="page-title">
     <div class="row">
         <div class="col-sm-6">
-            <h4 class="mb-0"> استبعاد رسوم{{$student->name}}</h4>
+            <h4 class="mb-0">  سند صرف {{$student->name}}</h4>
         </div>
         <div class="col-sm-6">
             <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right ">
@@ -20,7 +20,7 @@
     </div>
 </div>
 @section('PageTitle')
-    استبعاد رسوم{{$student->name}}
+    سند صرف {{$student->name}}
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -41,7 +41,7 @@
                         </div>
                     @endif
 
-                    <form method="post"  action="{{ route('ProcessingFee.store') }}" autocomplete="off">
+                    <form method="post"  action="{{ route('Payment_students.store') }}" autocomplete="off">
                         @csrf
                         <div class="row">
                             <div class="col-md-6">

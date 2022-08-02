@@ -2,25 +2,25 @@
 @section('css')
     @toastr_css
 @section('title')
-  تعديل معالجة رسوم
+  تعديل سند صرف
 @stop
 @endsection
 @section('page-header')
 <div class="page-title">
     <div class="row">
         <div class="col-sm-6">
-            <h4 class="mb-0"> تعديل معالجة رسوم   : <label style="color: red">{{$ProcessingFee->student->name}}</label></h4>
+            <h4 class="mb-0">تعديل سند صرف : <label style="color: red">{{$payment_student->student->name}}</label></h4>
         </div>
         <div class="col-sm-6">
             <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right ">
                 <li class="breadcrumb-item"><a href="#" class="default-color">الصفحه الرئيسية</a></li>
-                <li class="breadcrumb-item active">Page Title</li>
+                <li class="breadcrumb-item active">تعديل سند صرف : <label style="color: red">{{$payment_student->student->name}}</label></li>
             </ol>
         </div>
     </div>
 </div>
 @section('PageTitle')
-   
+تعديل سند صرف : <label style="color: red">{{$payment_student->student->name}}</label>
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -41,7 +41,7 @@
                         </div>
                     @endif
 
-                            <form action="{{route('ProcessingFee.update','test')}}" method="post" autocomplete="off">
+                            <form action="{{route('Payment_students.update','test')}}" method="post" autocomplete="off">
                                 @method('PUT')
                                 @csrf
                             @csrf
@@ -49,9 +49,9 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>المبلغ : <span class="text-danger">*</span></label>
-                                        <input  class="form-control" name="Debit" value="{{$ProcessingFee->amount}}" type="number" >
-                                        <input  type="hidden" name="student_id" value="{{$ProcessingFee->student->id}}" class="form-control">
-                                        <input  type="hidden" name="id"  value="{{$ProcessingFee->id}}" class="form-control">
+                                        <input  class="form-control" name="Debit" value="{{$payment_student->amount}}" type="number" >
+                                        <input  type="hidden" name="student_id" value="{{$payment_student->student->id}}" class="form-control">
+                                        <input  type="hidden" name="id"  value="{{$payment_student->id}}" class="form-control">
                                     </div>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label>البيان : <span class="text-danger">*</span></label>
-                                        <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3">{{$ProcessingFee->description}}</textarea>
+                                        <textarea class="form-control" name="description" id="exampleFormControlTextarea1" rows="3">{{$payment_student->description}}</textarea>
                                     </div>
                                 </div>
 
