@@ -2,13 +2,26 @@
 @section('css')
     @toastr_css
 @section('title')
-    {{ trans('Teacher_trans.Add_Teacher') }}
+    إضافة معلم
 @stop
 @endsection
 @section('page-header')
-    <!-- breadcrumb -->
+   <!-- breadcrumb -->
+<div class="page-title">
+    <div class="row">
+        <div class="col-sm-6">
+            <h4 class="mb-0"> إضافه معلم</h4>
+        </div>
+        <div class="col-sm-6">
+            <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right ">
+                <li class="breadcrumb-item"><a href="#" class="default-color">الصفحه الرئيسية</a></li>
+                <li class="breadcrumb-item active">Page Title</li>
+            </ol>
+        </div>
+    </div>
+</div>
 @section('PageTitle')
-    {{ trans('Teacher_trans.Add_Teacher') }}
+    إضافة معلم
 @stop
 <!-- breadcrumb -->
 @endsection
@@ -177,7 +190,7 @@
                                 <div class="alert alert-danger">{{ $message }}</div>
                                 @enderror
                             </div>
-                            
+
 
                             <button class="btn btn-success btn-sm nextBtn btn-lg pull-right" type="submit">حفظ البايانات</button>
                     </form>

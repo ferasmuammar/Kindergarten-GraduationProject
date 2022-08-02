@@ -1,11 +1,16 @@
 <?php
 
+use App\Http\Controllers\FeeController;
+use App\Http\Controllers\FeesInvoicesController;
 use App\Http\Controllers\GradeController;
 use App\Http\Controllers\GraduatedController;
+use App\Http\Controllers\ProcessingFeeController;
 use App\Http\Controllers\PromotionController;
+use App\Http\Controllers\ReceiptStudentsController;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,9 +24,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dashboard');
+Auth::routes();
+Route::group(['middleware' => ['guest']], function () {
+
+    Route::get('/', function () {
+        return view('auth.login');
+    });
+
 });
+
+// Route::get('/', function () {
+//     return view('auth.login');
+// });
 Route::resource('grade', GradeController::class);
 Route::resource('section', SectionController::class);
 Route::resource('Teachers', TeacherController::class);
@@ -40,4 +54,29 @@ Route::post('Delete_attachment',[StudentController::class, 'Delete_attachment'])
 Route::resource('Promotion',PromotionController::class);
 Route::resource('Graduated',GraduatedController::class);
 
+    //=============================Fees Students ============================
 
+Route::resource('Fees',FeeController::class);
+Route::resource('Fees_Invoices', FeesInvoicesController::class);
+Route::resource('receipt_students', ReceiptStudentsController::class);
+Route::resource('ProcessingFee', ProcessingFeeController::class);
+
+
+
+
+Auth::routes();
+
+Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
