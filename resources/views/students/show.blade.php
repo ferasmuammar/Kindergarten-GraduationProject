@@ -111,7 +111,7 @@
                                                     <td colspan="2">
                                                         <a class="btn btn-outline-info btn-sm"
                                                            href="{{url('Download_attachment')}}/{{ $attachment->imageable->name }}/{{$attachment->filename}}"
-                                                           role="button"><i class="fas fa-download"></i>&nbsp; تحميل الملف</a>
+                                                           role="button"><i class="fa fa-cloud-download" aria-hidden="true"></i></i>&nbsp; تحميل الملف</a>
 
                                                         <button type="button" class="btn btn-outline-danger btn-sm"
                                                                 data-toggle="modal"

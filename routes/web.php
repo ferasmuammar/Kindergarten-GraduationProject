@@ -5,12 +5,14 @@ use App\Http\Controllers\FeeController;
 use App\Http\Controllers\FeesInvoicesController;
 use App\Http\Controllers\GradeController;
 use App\Http\Controllers\GraduatedController;
+use App\Http\Controllers\LibraryController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProcessingFeeController;
 use App\Http\Controllers\PromotionController;
 use App\Http\Controllers\ReceiptStudentsController;
 use App\Http\Controllers\SectionController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\TeacherController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -66,6 +68,15 @@ Route::resource('Payment_students', PaymentController::class);
 
 //================================Attendance ==============================
 Route::resource('Attendance', AttendanceController::class);
+
+//==============================Subjects============================
+
+Route::resource('subjects', SubjectController::class);
+
+//========================
+Route::get('download_file/{filename}',[LibraryController::class,'downloadAttachment'])->name('downloadAttachment');
+Route::resource('library', LibraryController::class);
+
 
 
 
