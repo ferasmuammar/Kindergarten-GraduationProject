@@ -11,6 +11,7 @@ use App\Http\Controllers\ProcessingFeeController;
 use App\Http\Controllers\PromotionController;
 use App\Http\Controllers\ReceiptStudentsController;
 use App\Http\Controllers\SectionController;
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\SubjectController;
 use App\Http\Controllers\TeacherController;
@@ -77,6 +78,8 @@ Route::resource('subjects', SubjectController::class);
 Route::get('download_file/{filename}',[LibraryController::class,'downloadAttachment'])->name('downloadAttachment');
 Route::resource('library', LibraryController::class);
 
+//==============================Setting============================
+Route::resource('settings', SettingController::class);
 
 
 

@@ -170,6 +170,11 @@
                         </ul>
                     </li>
 
+                     <!-- Settings-->
+                     <li>
+                        <a href="{{route('settings.index')}}"><i class="fa fa-cogs" aria-hidden="true"></i><span class="right-nav-text">الاعددات </span></a>
+                    </li>
+
                 </ul>
             </div>
         </div>
